@@ -1,4 +1,10 @@
-.thumbnailImage {
-    margin: 5px;
-    padding: 5px;
+.unselectedImage {
+    margin: 10px;
+    border: 5px solid aqua;
 }
+
+.selectedImage {
+    margin: 10px;
+    border: 5px solid orange;
+}
+

@@ -22,7 +22,7 @@ export function ImageSelector() {
     
     const imageUrls = getImageUrls();
 
-    const thumbnailImages = imageUrls.map((url) => <img className="thumbnailImage" onClick={() => setSelectedImageUrl(url)} src={url} alt="Thumbnail image"/>)
+    const thumbnailImages = imageUrls.map((url) => <img className={(selectedImageUrl === url ? "selectedImage": "unselectedImage")} onClick={() => {setSelectedImageUrl(url)}} src={url} alt="Thumbnail image"/>)
 
     return (
         <div>

@@ -1,6 +1,9 @@
 import "./ImageSelector.css"
+import { useState } from "react";
 
 export function ImageSelector() {
+    const [selectedImageUrl, setSelectedImageUrl] = useState("no photo selected")
+
     const brokenImages = [
         1, 24, 32, 36, 44, 47
     ];
@@ -19,10 +22,11 @@ export function ImageSelector() {
     
     const imageUrls = getImageUrls();
 
-    const thumbnailImages = imageUrls.map((url) => <img className="thumbnailImage" src={url} alt="Thumbnail image"/>)
+    const thumbnailImages = imageUrls.map((url) => <img className="thumbnailImage" onClick={() => setSelectedImageUrl(url)} src={url} alt="Thumbnail image"/>)
 
     return (
         <div>
+            {selectedImageUrl}
             {thumbnailImages}
         </div>
     )

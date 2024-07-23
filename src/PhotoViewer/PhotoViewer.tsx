@@ -1,9 +1,9 @@
 import "./PhotoViewer.css";
 
-export function PhotoViewer({photoUrl}: {photoUrl: string}): JSX.Element {
+export function PhotoViewer({selectedImageUrl}: {selectedImageUrl: string}): JSX.Element {
     return (
         <div>
-            <img className="firstImage" src={photoUrl} alt="Random image" />
+            <img className="firstImage" src={selectedImageUrl} alt="Random image" />
         </div>
     )
 }

@@ -23,14 +23,14 @@ interface ImageSelectorProps {
     setSelectedImageUrl: (url: string) => void;
   }
 
-export function ImageSelector({ selectedImageUrl, setSelectedImageUrl }: ImageSelectorProps): JSX.Element[] {
+export function ImageSelector( props: ImageSelectorProps): JSX.Element[] {
    
     return (
         imageUrls.map((imageUrl, index) =>
             <img 
                 key={index}
-                className={(selectedImageUrl === imageUrl ? "selectedImage": "unselectedImage")} 
-                onClick={() => setSelectedImageUrl(imageUrl)} 
+                className={(props.selectedImageUrl === imageUrl ? "selectedImage": "unselectedImage")} 
+                onClick={() => props.setSelectedImageUrl(imageUrl)} 
                 src={imageUrl} 
                 alt="Thumbnail image"
             />
